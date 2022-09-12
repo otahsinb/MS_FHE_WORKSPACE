@@ -4,8 +4,8 @@
 using namespace std;
 using namespace seal;
 
-int main()
-{
-	EncryptionParameters params(scheme_type::BFV);
-	return 0;
-}
+//int main()
+//{
+//	EncryptionParameters params(scheme_type::BFV);
+//	return 0;
+//}
