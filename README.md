@@ -6,7 +6,8 @@ Fully Homomorphic Encryption Project Workspace
 ✅ 1. I worked on SEAL FHE using Microsoft Visual Studio C++ tool.\
 ✅ 2. I got a cmake error with MSVC++ 2022. The cmake script is using the ***config.h.in*** file as guarded. But other code files are accessed with the name ***config.h***. I've been working on it looking for a solution.\
 ✅ 3. I compiled the seal library with MSVC++ 2019 and produced the lib file. There is a compiler version difference with MSVC++ 2022. That's why I made my productions in  MSVC++ 2019.\
-✅ 4. After generating the vector data from the raw image data, I will look into the comparison algorithms.\
+✅ 4. I have downloaded ***lfw*** dataset which is used in [Boddeti's paper](http://hal.cse.msu.edu/assets/pdfs/papers/2018-btas-secure-face-matching.pdf) [4] \
+✅ 5. After generating the vector data from the raw image data, I will look into the comparison algorithms.
 
 > **1_Results**
 ```diff
