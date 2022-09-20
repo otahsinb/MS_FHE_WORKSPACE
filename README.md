@@ -81,8 +81,7 @@ We leverage the observation that a typical face matching metric, either Euclidea
 🔺1.16. We leverage the Fan-Vercauteren scheme [11],a more efficient FHE scheme, and a batching scheme that allows homomorphic multiplication of multiple numbers for the cost of a single homomorphic multiplication.\
 🔺1.17. Current state-of-theart face recognition approaches are based on deep neural network based representation learning techniques. These methods [44, 39, 31, 23] rely on end-to-end learning of feature extraction models using convolutional neural networks (CNNs). The goal of this paper is to ensure secure matching of face templates extracted from such representation models. We demonstrate the efficacy of our framework on two different face representation models, FaceNet [39] (128-dimensions) and SphereFace [23] (512-dimensions).\
 🔺1.18. The goal of this paper is to explore the practicality of using fully homomorphic encryption for face matching over encrypted face templates. First we describe the face matching process and break it down to its constituent operations, series of multiplications and additions. Then we introduce fully homomorphic encryption and finally describe solutions to mitigate the computational burden of face matching over encrypted data.\
-🔺1.19. During deployment, a user who wishes to get authenticated provides their facial image from which a representation y is extracted. This representation is then matched against the\
-templates in the database. The result of the matching process is a score that determines the degree of dissimilarity between y and X.\
+🔺1.19. During deployment, a user who wishes to get authenticated provides their facial image from which a representation y is extracted. This representation is then matched against the templates in the database. The result of the matching process is a score that determines the degree of dissimilarity between y and X.\
 
 ![Dissimilarity_calc](https://user-images.githubusercontent.com/54834769/190981200-e1b8a0bd-f51e-4221-9d20-0552d06725e0.PNG)
 
@@ -103,15 +102,15 @@ Hence, the face matching process is comprised of d scalar multiplications and d 
 🔺1.27. Given two vectors x and y, the sum and Hadamard product of the two vectors can simply be computed as elementwise addition and multiplication, respectively, of the encrypted vectors. By batching k numbers into a single encrypted block, we can perform k homomorphic additions or multiplications at the block level for the computational cost of a single operation. Therefore, as the batch size gets larger, we can realize significant computational efficiency. The main drawback of this scheme, however, is the inability to access the individual elements of the packed encrypted vector. This prevents us from computing the sum of the elements, an operation that is necessary for computing the dissimilarity score (Eq. 3). This limitation can be addressed by leveraging the observation made my Gentry et al. [15], namely, it is possible to cyclically rotate the encrypted vectors without the need for decryption. Therefore, the sum of the encrypted values can be computed by cyclically rotating and adding the encrypted vectors l = (logq)_w times._ \
 🔺1.28. Face templates encrypted through one set of encryption keys have to be re-encrypted through another set of encryption keys without decrypting the template. This key-switching operation is supported by the FV scheme and is similar to the multiplication operation\
 🔺1.29.  Under this security model, the communication channel is secure from a malicious attacker, since the encrypted facial template cannot be decrypted without access to the secret key. \
-🔺1.30. we consider the following datasets (1) LFW [17] consisting of 13,233 face images of 5,749 subjects, downloaded from the web. These images exhibit limited variations in pose, illumination, and expression... \
+🔺1.30. we consider the following datasets (1) LFW [17] consisting of 13,233 face images of 5,749 subjects, downloaded from the web. These images exhibit limited variations in pose, illumination, and expression... 
 
 
 ✅ 2. According to the [1] MS Seal Docs; "ms_seal allows additions and multiplications to be performed on encrypted integers or real numbers. Other operations,
 such as encrypted comparison, sorting, or regular expressions, are in most cases not feasible to evaluate on encrypted data using this technology"
 
-🏁 **2_RESULTS**
+🏁 **2_RESULTS**\
 
-*Notes:*
+*Notes:* \
 1. 
 
 
@@ -121,5 +120,5 @@ such as encrypted comparison, sorting, or regular expressions, are in most cases
 3. https://homomorphicencryption.org/
 
 
-🏁 **3_DEVELOPMENT_STEPS**
+🏁 **3_DEVELOPMENT_STEPS** \
 1. 
