@@ -108,7 +108,7 @@ Hence, the face matching process is comprised of d scalar multiplications and d 
 ✅ 2. According to the [1] MS Seal Docs; "ms_seal allows additions and multiplications to be performed on encrypted integers or real numbers. Other operations,
 such as encrypted comparison, sorting, or regular expressions, are in most cases not feasible to evaluate on encrypted data using this technology"
 
-🏁 **2_RESULTS**\
+🏁 **2_RESULTS**
 
 *Notes:* \
 1. 
